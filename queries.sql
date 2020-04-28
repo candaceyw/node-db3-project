@@ -31,3 +31,9 @@ ORDER BY "ProductName";
 FROM "Order" AS o
 JOIN "Customer" AS c ON c."Id" = o."CustomerId"
 JOIN "Employee" AS e ON o."EmployeeId";
+
+
+--  STRETCH
+-- Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 8 records.
+
+-- Display OrderID and a column called ItemCount that shows the total number of products placed on the order. Shows 196 records.
