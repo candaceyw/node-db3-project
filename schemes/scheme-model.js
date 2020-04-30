@@ -34,6 +34,10 @@ function add(scheme) {
 	return db('schemes').insert(scheme);
 }
 
+function addStep(stepData, id) {
+	return db('steps').join('schemes', 'schemes.id', id).insert(stepData);
+}
+
 function update(changes, id) {
 	return db('schemes')
 		.where('id', id)
@@ -54,4 +58,5 @@ module.exports = {
 	add,
 	update,
 	remove,
+	addStep,
 };
